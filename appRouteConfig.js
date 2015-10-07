@@ -7,7 +7,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('state1', {
       url: "/createAccountRequest",
-        templateUrl: "app/CreateAccount/createAccountView.html"
+        templateUrl: "app/CreateAccount/createAccountView.html",
+        controller: "createAccountController",
     })
     .state('state2', {
       url: "/state2",
