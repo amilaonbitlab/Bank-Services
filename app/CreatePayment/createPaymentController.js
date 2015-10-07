@@ -6,9 +6,21 @@ app.controller("createPaymentController",function($scope,$http) {
         $scope.responseData = '';
         $scope.requestData = '';
         $scope.reqUrl = 'http://localhost:1337/payment/transactionByBank';
-        $scope.payment.SecurityToken = '';
-        $scope.payment.SessionID = '';
-        $scope.payment.MessageRouteID = '';
+        $scope.Payment.SecurityToken = '';
+        $scope.Payment.SessionID = '';
+        $scope.Payment.MessageRouteID = '';
+        $scope.Payment.TimeStamp = '';
+        $scope.Payment.TransactionID = '';
+        $scope.Payment.SecretTransactionKey = '';
+        $scope.Payment.PaymentMerchantID = '';
+        $scope.Payment.PaymentMerchantName = '';
+        $scope.Payment.PaymentMerchnatBank = '';
+        $scope.Payment.PaymentMerchnatAccountID = '';
+        $scope.Payment.TransactionCurrency = '';
+        $scope.Payment.TransactionAmount = '';
+        $scope.Payment.CallType = '';
+        $scope.Payment.PPLKAccountID = '';
+        $scope.Payment.Tags = '';
 
     }
 
@@ -28,8 +40,10 @@ app.controller("createPaymentController",function($scope,$http) {
             TransactionID: payment.TransactionID,
             SecretTransactionKey: payment.SecretTransactionKey,
             PaymentMerchantID: payment.PaymentMerchantID,
+            PaymentMerchantName: payment.PaymentMerchantName,
             PaymentMerchnatBank: payment.PaymentMerchnatBank,
             PaymentMerchnatAccountID: payment.PaymentMerchnatAccountID,
+            TransactionCurrency: payment.TransactionCurrency,
             TransactionAmount: payment.TransactionAmount,
             CallType: payment.CallType,
             PPLKAccountID: payment.PPLKAccountID,
