@@ -1,15 +1,17 @@
-app.controller("accountCtrl",function($scope,$http) {
+app.controller("createAccountController",function($scope,$http) {
     
     $scope.message = "All reserved @sampath.com";
 
-    $scope.reset = function(){
-      $scope.Account.verificationCode = '';
-      $scope.Account.SecurityToken = '';
-      $scope.Account.sessionID = '';
-      $scope.Account.transactionId = '';
-      $scope.Account.SecretTransactionKey = '';
-      $scope.Account.Tags = '';
-    };
+    $scope.reSetData = function(){
+        $scope.responseData = '';
+        $scope.Account.verificationCode = '';
+        $scope.Account.SecurityToken = '';
+        $scope.Account.sessionID = '';
+        $scope.Account.timeStamp = '';
+        $scope.Account.transactionId = '';
+        $scope.Account.SecretTransactionKey = '';
+        $scope.Account.Tags = '';
+    }
 
     $scope.responseData = '';
 

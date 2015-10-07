@@ -6,90 +6,26 @@
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
 </head>
-<body ng-app="accountApp" ng-controller="accountCtrl">
-
+<body ng-app="accountApp" >
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-offset-0">
-            <h1 class="text-center page_heading">Create Account</h1>
-            <h3></h3>
-            <form role="form" name="AccountForm" class="" >
-            <fieldset>
-                <div class="form-group clearfix">
-		            <div class="detail-view">
-			            <label class="control-label">Verification Code</label>
-			        </div>
-			        <div class="detail-view">
-			            <input type="text" class="form-control" name="verificationCode" ng-model="Account.verificationCode" required placeholder="4 numbers" />
-		            </div>
-					<p class="warning" ng-hide="Account.verificationCode">*<i>required</i></p>
-		        </div>
-		        <div class="form-group clearfix">
-		            <div class="detail-view">
-			            <label class="control-label">Security Token</label>
-			            <input type="text" class="form-control" name="SecurityToken" ng-model="Account.SecurityToken"  placeholder="SecurityToken" />
-		            </div>
-		         </div>
-		        <div class="form-group clearfix">	 
-		            <div>
-			            <label class="control-label">Time Stamp</label>
-			            <input type="text" class="form-control" name="verificationCode" ng-model="Account.timeStamp"  placeholder="Time Stampe" />
-		            </div>
-		        </div>
-		        <div class="form-group clearfix">
-		            <div>
-			            <label class="control-label">Session ID</label>
-			            <input type="text" class="form-control" name="SessionID" ng-model="Account.sessionID"  placeholder="Session ID" />
-		            </div>
-		        </div>
-		        <div class="form-group clearfix">
-		            <div>
-			            <label class="control-label">Transaction Id</label>
-			            <input type="text" class="form-control" name="transactionId" ng-model="Account.transactionId" placeholder="Transaction Id" />
-		            </div>
-		        </div>
-		        <div class="form-group clearfix">
-		            <div>
-			            <label class="control-label">Secret Transaction Key</label>
-			            <input type="text" class="form-control" name="SecretTransactionKey" ng-model="Account.SecretTransactionKey" placeholder="Secret Transaction Key" />
-		            </div>
-		        </div>
-		        <div class="form-group clearfix">        
-	                <div>    
-	                    <button ng-disabled="!(Account.verificationCode)" class="btn btn-info btn-block" ng-click='CreateAccount(Account)' type="submit">
-	                    Create Account
-	                    </button>
-	                </div>
-	             </div>     
-            </fieldset>        	
-            </form>
-        	<div class="form-group clearfix">        
-                <div>    
-                    <button class="btn btn-block" ng-click='reset()' type="submit">
-                    Clear
-                    </button>              
-                </div>
-             </div> 	                        
-            <div class="form-group clearfix">
-                <div class="detail-view">
-            		<center>{{message}}</center>
-            	</div>
-            </div>   
-            <div class="clearfix">
-                <div class="detail-view">
-            		<center>{{responseData}}</center>
-            	</div>
-            </div>                                  
-        </div>    
-    </div>                   
+	<h3 class="text-center">Create Request Application</h3>
+	<a ui-sref="state1">Account Request</a>
 </div>
+<div ui-view></div>
+<!-- We'll also add some navigation: -->
+
+
 
 <!-- Bower Components  -->
 <script src="bower_components/angular/angular.min.js"></script>
 
+<!-- Node Module -->
+<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
 <!-- Custom Js -->
 <script src="app.js"></script>
-<script src="app/CreateAccount/createAccount.js"></script>
+<script src="appRouteConfig.js"></script>
+<script src="app/CreateAccount/createAccountController.js"></script>
 
 </body>
 </html>
