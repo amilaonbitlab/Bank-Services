@@ -1,0 +1,8 @@
+{
+  "name": "saccount-create-server",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "~1.4.7",
+    "bootstrap": "~3.3.5"
+  }
+}
