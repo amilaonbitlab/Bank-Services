@@ -1,20 +1,23 @@
 app.config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/state1");
+ // $urlRouterProvider.otherwise("state1");
   //
   // Now set up the states
+    $urlRouterProvider.otherwise(function($injector) {
+        var $state = $injector.get("$state");
+        $state.go('account');
+    });
+
   $stateProvider
-    .state('state1', {
+    .state('account', {
       url: "/createAccountRequest",
         templateUrl: "app/CreateAccount/createAccountView.html",
-        controller: "createAccountController",
+        controller: "createAccountController"
     })
-    .state('state2', {
-      url: "/state2",
-      templateUrl: "partials/state1.list.html",
-      controller: function($scope) {
-        $scope.items = ["A", "List", "Of", "Items"];
-      }
-    });
+    .state('payment', {
+        url: "/createPaymentRequest",
+        templateUrl: "app/CreatePayment/createPaymentView.html",
+        controller: "createPaymentController"
+      });
 });

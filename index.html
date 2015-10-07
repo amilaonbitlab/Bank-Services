@@ -7,14 +7,19 @@
 
 </head>
 <body ng-app="accountApp" >
-<div class="container">
-	<h3 class="text-center">Create Request Application</h3>
-	<a ui-sref="state1">Account Request</a>
-</div>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a ui-sref="account">Account Request</a></li>
+				<li class=""><a ui-sref="payment">Payment Request</a></li>
+			</ul>
+			</div>
+		</div>
+	</nav>
+
+<!-- Inject View Template Here-->
 <div ui-view></div>
-<!-- We'll also add some navigation: -->
-
-
 
 <!-- Bower Components  -->
 <script src="bower_components/angular/angular.min.js"></script>
@@ -26,6 +31,7 @@
 <script src="app.js"></script>
 <script src="appRouteConfig.js"></script>
 <script src="app/CreateAccount/createAccountController.js"></script>
+<script src="app/CreatePayment/createPaymentController.js"></script>
 
 </body>
 </html>

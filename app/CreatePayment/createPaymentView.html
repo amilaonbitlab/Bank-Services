@@ -2,7 +2,7 @@
     <div class="row">
         <!--<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-offset-0">-->
         <div class="col-md-12 ">
-            <h1 class="text-center page_heading">Create Account</h1>
+            <h1 class="text-center page_heading">Create Payment</h1>
             <h3></h3>
             <div class="form-group ">
                 <div class="col-md-3">
@@ -14,15 +14,14 @@
                 </div>
             </div>
             <h3></h3>
-            <form role="form" name="AccountForm" class="" >
-
+            <form role="form" name="PaymentForm" class="" >
                 <fieldset>
                     <div class="form-group ">
                         <div class="col-md-3">
                             <label class="control-label pull-right">Security Token</label>
                         </div>
                         <div class="input-group input-group-sm col-sm-8 ">
-                            <input type="text" class="form-control" name="SecurityToken" ng-model="Account.SecurityToken" placeholder="Security Token"  />
+                            <input type="text" class="form-control" name="SecurityToken" ng-model="Payment.SecurityToken" placeholder="Security Token"  />
                             <span class="input-group-addon">String</span>
                         </div>
                     </div>
@@ -31,7 +30,7 @@
                             <label class="control-label pull-right">Session ID</label>
                         </div>
                         <div class="input-group input-group-sm col-sm-8 ">
-                            <input type="text" class="form-control" name="SessionID" ng-model="Account.SessionID" placeholder="Session ID"  />
+                            <input type="text" class="form-control" name="SessionID" ng-model="Payment.SessionID" placeholder="Session ID"  />
                             <span class="input-group-addon">String</span>
                         </div>
                     </div>
@@ -40,7 +39,7 @@
                             <label class="control-label pull-right">Time Stamp</label>
                         </div>
                         <div class="input-group input-group-sm col-sm-8 ">
-                            <input type="text" class="form-control" name="TimeStamp" ng-model="Account.TimeStamp" placeholder="Time Stampe"  />
+                            <input type="text" class="form-control" name="TimeStamp" ng-model="Payment.TimeStamp" placeholder="Time Stampe"  />
                             <span class="input-group-addon">String</span>
                         </div>
                     </div>
@@ -49,7 +48,7 @@
                             <label class="control-label pull-right">Transaction ID</label>
                         </div>
                         <div class="input-group input-group-sm col-sm-8 ">
-                            <input type="text" class="form-control" name="Transaction ID" ng-model="Account.TransactionID" placeholder="Transaction ID"  />
+                            <input type="text" class="form-control" name="Transaction ID" ng-model="Payment.TransactionID" placeholder="Transaction ID"  />
                             <span class="input-group-addon">String</span>
                         </div>
                     </div>
@@ -58,7 +57,7 @@
                             <label class="control-label pull-right">Secret Transaction Key</label>
                         </div>
                         <div class="input-group input-group-sm col-sm-8 ">
-                            <input type="text" class="form-control" name="Transaction ID" ng-model="Account.SecretTransactionKey" placeholder="Secret Transaction Key"  />
+                            <input type="text" class="form-control" name="Transaction ID" ng-model="Payment.SecretTransactionKey" placeholder="Secret Transaction Key"  />
                             <span class="input-group-addon">String</span>
                         </div>
                     </div>
@@ -67,7 +66,7 @@
                             <label class="control-label pull-right">Verification Code</label>
                         </div>
                         <div class="input-group input-group-sm col-sm-8 ">
-                            <input type="text" class="form-control" name="VerificationCode" ng-model="Account.VerificationCode" placeholder="Verification Code"  />
+                            <input type="text" class="form-control" name="VerificationCode" ng-model="Payment.VerificationCode" placeholder="Verification Code"  />
                             <span class="input-group-addon">String</span>
                         </div>
                     </div>
@@ -76,14 +75,14 @@
                             <label class="control-label pull-right">Tags</label>
                         </div>
                         <div class="input-group input-group-sm col-sm-8 ">
-                            <input type="text" class="form-control" name="Tags" ng-model="Account.Tags" placeholder="Tags"  />
+                            <input type="text" class="form-control" name="Tags" ng-model="Payment.Tags" placeholder="Tags"  />
                             <span class="input-group-addon">String</span>
                         </div>
                     </div>
                     <div class="form-group ">
                         <div class="col-md-3"></div>
                         <div class="col-sm-2 ">
-                            <button class="btn btn-info btn-block pull-left" ng-click='CreateAccount(Account)' type="submit">
+                            <button class="btn btn-info btn-block pull-left" ng-click='CreatePayment(Payment)' type="submit">
                                 Submit
                             </button>
                         </div>
@@ -98,15 +97,8 @@
                     <button class="btn btn-block" ng-click='reSetData()' type="submit">
                         Clear
                     </button>
-                    </div>
-                <div class="col-md-4">
-                    <div class="form-group clearfix">
-                        <div class="detail-view ">
-                            <label class="control-label pull-right">Request</label>
-                        </div>
-                    </div>
                 </div>
-                </div>
+            </div>
             <h3></h3>
             <div class="form-group ">
                 <div class="col-md-3">
@@ -126,8 +118,8 @@
                         {{requestData}}
                     </pre>
                 </div>
-                </div>
             </div>
         </div>
     </div>
+</div>
 </div>
