@@ -12,9 +12,9 @@ Server run
 
 Four main function to send request 
 
-    01  Transaction
+    01  Account Authorization
     
-    02  Account Authorization
+    02  Transaction
     
     03  Transaction Time Out Calls
     
