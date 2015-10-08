@@ -5,13 +5,13 @@ app.controller("createAccountController",function($scope,$http) {
     $scope.reSetData = function(){
         $scope.responseData = '';
         $scope.requestData = '';
-        $scope.Account.VerificationCode = '';
-        $scope.Account.SecurityToken = '';
-        $scope.Account.SessionID = '';
-        $scope.Account.TimeStamp = '';
-        $scope.Account.TransactionID = '';
-        $scope.Account.SecretTransactionKey = '';
-        $scope.Account.Tags = '';
+        $scope.InputData.VerificationCode = '';
+        $scope.InputData.SecurityToken = '';
+        $scope.InputData.SessionID = '';
+        $scope.InputData.TimeStamp = '';
+        $scope.InputData.TransactionID = '';
+        $scope.InputData.SecretTransactionKey = '';
+        $scope.InputData.Tags = '';
         $scope.reqUrl = 'http://localhost:1337/account/preRegisterVerification';
     }
 
@@ -21,16 +21,16 @@ app.controller("createAccountController",function($scope,$http) {
 
     $scope.reqUrl = 'http://localhost:1337/account/preRegisterVerification';
 
-    $scope.CreateAccount = function(account){
+    $scope.CreateAccount = function(inputData){
 
         var reqData = {
-            SecurityToken : account.SecurityToken,
-            SessionID: account.SessionID,
-            TimeStamp: account.TimeStamp,
-            TransactionId: account.TransactionID,
-            SecretTransactionKey: account.SecretTransactionKey,
-            VerificationCode: account.VerificationCode,
-            Tags: account.Tags
+            SecurityToken : inputData.SecurityToken,
+            SessionID: inputData.SessionID,
+            TimeStamp: inputData.TimeStamp,
+            TransactionId: inputData.TransactionID,
+            SecretTransactionKey: inputData.SecretTransactionKey,
+            VerificationCode: inputData.VerificationCode,
+            Tags: inputData.Tags
         };
         $scope.requestData = reqData;
 

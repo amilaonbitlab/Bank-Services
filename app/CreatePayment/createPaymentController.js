@@ -6,21 +6,21 @@ app.controller("createPaymentController",function($scope,$http) {
         $scope.responseData = '';
         $scope.requestData = '';
         $scope.reqUrl = 'http://localhost:1337/payment/transactionByBank';
-        $scope.Payment.SecurityToken = '';
-        $scope.Payment.SessionID = '';
-        $scope.Payment.MessageRouteID = '';
-        $scope.Payment.TimeStamp = '';
-        $scope.Payment.TransactionID = '';
-        $scope.Payment.SecretTransactionKey = '';
-        $scope.Payment.PaymentMerchantID = '';
-        $scope.Payment.PaymentMerchantName = '';
-        $scope.Payment.PaymentMerchnatBank = '';
-        $scope.Payment.PaymentMerchnatAccountID = '';
-        $scope.Payment.TransactionCurrency = '';
-        $scope.Payment.TransactionAmount = '';
-        $scope.Payment.CallType = '';
-        $scope.Payment.PPLKAccountID = '';
-        $scope.Payment.Tags = '';
+        $scope.InputData.SecurityToken = '';
+        $scope.InputData.SessionID = '';
+        $scope.InputData.MessageRouteID = '';
+        $scope.InputData.TimeStamp = '';
+        $scope.InputData.TransactionID = '';
+        $scope.InputData.SecretTransactionKey = '';
+        $scope.InputData.PaymentMerchantID = '';
+        $scope.InputData.PaymentMerchantName = '';
+        $scope.InputData.PaymentMerchnatBank = '';
+        $scope.InputData.PaymentMerchnatAccountID = '';
+        $scope.InputData.TransactionCurrency = '';
+        $scope.InputData.TransactionAmount = '';
+        $scope.InputData.CallType = '';
+        $scope.InputData.PPLKAccountID = '';
+        $scope.InputData.Tags = '';
 
     }
 
@@ -30,24 +30,24 @@ app.controller("createPaymentController",function($scope,$http) {
 
     $scope.requestData = '';
 
-    $scope.CreatePayment = function(payment){
+    $scope.CreatePayment = function(inputData){
 
         var reqData = {
-            SecurityToken: payment.SecurityToken,
-            SessionID: payment.SessionID,
-            MessageRouteID: payment.MessageRouteID,
-            TimeStamp: payment.TimeStamp,
-            TransactionID: payment.TransactionID,
-            SecretTransactionKey: payment.SecretTransactionKey,
-            PaymentMerchantID: payment.PaymentMerchantID,
-            PaymentMerchantName: payment.PaymentMerchantName,
-            PaymentMerchnatBank: payment.PaymentMerchnatBank,
-            PaymentMerchnatAccountID: payment.PaymentMerchnatAccountID,
-            TransactionCurrency: payment.TransactionCurrency,
-            TransactionAmount: payment.TransactionAmount,
-            CallType: payment.CallType,
-            PPLKAccountID: payment.PPLKAccountID,
-            Tags: payment.Tags
+            SecurityToken: inputData.SecurityToken,
+            SessionID: inputData.SessionID,
+            MessageRouteID: inputData.MessageRouteID,
+            TimeStamp: inputData.TimeStamp,
+            TransactionID: inputData.TransactionID,
+            SecretTransactionKey: inputData.SecretTransactionKey,
+            PaymentMerchantID: inputData.PaymentMerchantID,
+            PaymentMerchantName: inputData.PaymentMerchantName,
+            PaymentMerchnatBank: inputData.PaymentMerchnatBank,
+            PaymentMerchnatAccountID: inputData.PaymentMerchnatAccountID,
+            TransactionCurrency: inputData.TransactionCurrency,
+            TransactionAmount: inputData.TransactionAmount,
+            CallType: inputData.CallType,
+            PPLKAccountID: inputData.PPLKAccountID,
+            Tags: inputData.Tags
         };
 
         $scope.requestData = reqData;
