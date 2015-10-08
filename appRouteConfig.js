@@ -19,5 +19,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: "/createPaymentRequest",
         templateUrl: "app/CreatePayment/createPaymentView.html",
         controller: "createPaymentController"
+      })
+      .state('transactionTimeOutCalls', {
+          url: "/transactionTimeOutCalls",
+          templateUrl: "app/TransactionTimeOutCalls/transactionTimeOutCallsView.html",
+          controller: "transactionTimeOutCallsController"
       });
 });
