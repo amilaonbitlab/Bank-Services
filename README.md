@@ -10,7 +10,7 @@ Server run
 
     Localhost:8888
 
-Four main function to send request 
+Main function 
 
     01  Account Authorization
     
