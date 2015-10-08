@@ -7,13 +7,14 @@
     node server.js
 
 Server run 
+
     Localhost:8888
 
 Four main function to send request 
 
-    01  Create Account
+    01  Transaction
     
-    02  Create Payment
+    02  Account Authorization
     
     03  Transaction Time Out Calls
     
