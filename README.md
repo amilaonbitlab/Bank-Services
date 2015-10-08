@@ -1,11 +1,13 @@
 # createRequestServers
-npm install 
 
-bower install
+    npm install 
 
-node server.js
+    bower install
 
-Server start  > Localhost:8888
+    node server.js
+
+Server run 
+    Localhost:8888
 
 Four main function to send request 
 
