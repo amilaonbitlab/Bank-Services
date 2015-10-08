@@ -1,14 +1,20 @@
 # createRequestServers
-npm install 
 
-bower install
+    npm install 
 
-node server.js
+    bower install
 
-Server start  > Localhost:8888
+    node server.js
+
+Server run 
+    Localhost:8888
 
 Four main function to send request 
+
     01  Create Account
+    
     02  Create Payment
+    
     03  Transaction Time Out Calls
+    
     04  Merchant ID Verification
