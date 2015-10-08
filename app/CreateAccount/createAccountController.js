@@ -27,7 +27,7 @@ app.controller("createAccountController",function($scope,$http) {
             SecurityToken : account.SecurityToken,
             SessionID: account.SessionID,
             TimeStamp: account.TimeStamp,
-            TransactionId: account.TransactionId,
+            TransactionId: account.TransactionID,
             SecretTransactionKey: account.SecretTransactionKey,
             VerificationCode: account.VerificationCode,
             Tags: account.Tags

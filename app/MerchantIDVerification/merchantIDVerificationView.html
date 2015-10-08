@@ -1,0 +1,159 @@
+<div class="container">
+    <div class="row">
+        <!--<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-offset-0">-->
+        <div class="col-md-12 ">
+            <h1 class="text-center page_heading">Merchant ID Verification - (4) </h1>
+            <h3></h3>
+            <div class="form-group ">
+                <div class="col-md-3">
+                    <label class="control-label pull-right">Url</label>
+                </div>
+                <div class="input-group input-group-sm col-sm-8 ">
+                    <input type="text" class="form-control" name="ServerUrl" ng-model="reqUrl"  placeholder=""  />
+                    <span class="input-group-addon">String</span>
+                </div>
+            </div>
+            <h3></h3>
+            <form role="form" name="MerchantIDVerification" class="" >
+                <fieldset>
+                    <div class="form-group ">
+                        <div class="col-md-3">
+                            <label class="control-label pull-right">Security Token</label>
+                        </div>
+                        <div class="input-group input-group-sm col-sm-8 ">
+                            <input type="text" class="form-control" name="SecurityToken" ng-model="InputData.SecurityToken" placeholder="Security Token"  />
+                            <span class="input-group-addon">String</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-md-3">
+                            <label class="control-label pull-right">Session ID</label>
+                        </div>
+                        <div class="input-group input-group-sm col-sm-8 ">
+                            <input type="text" class="form-control" name="SessionID" ng-model="InputData.SessionID" placeholder="Session ID"  />
+                            <span class="input-group-addon">String</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-md-3">
+                            <label class="control-label pull-right">Message Route ID</label>
+                        </div>
+                        <div class="input-group input-group-sm col-sm-8 ">
+                            <input type="text" class="form-control" name="MessageRouteID" ng-model="InputData.MessageRouteID" placeholder="Message Route ID"  />
+                            <span class="input-group-addon">String</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-md-3">
+                            <label class="control-label pull-right">Time Stamp</label>
+                        </div>
+                        <div class="input-group input-group-sm col-sm-8 ">
+                            <input type="text" class="form-control" name="TimeStamp" ng-model="InputData.TimeStamp" placeholder="Time Stampe"  />
+                            <span class="input-group-addon">String</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-md-3">
+                            <label class="control-label pull-right">Transaction ID</label>
+                        </div>
+                        <div class="input-group input-group-sm col-sm-8 ">
+                            <input type="text" class="form-control" name="TransactionID" ng-model="InputData.TransactionID" placeholder="Transaction ID"  />
+                            <span class="input-group-addon">String</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-md-3">
+                            <label class="control-label pull-right">PaymentMerchant ID</label>
+                        </div>
+                        <div class="input-group input-group-sm col-sm-8 ">
+                            <input type="text" class="form-control" name="PaymentMerchantID" ng-model="InputData.PaymentMerchantID" placeholder="PaymentMerchant ID"  />
+                            <span class="input-group-addon">String</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-md-3">
+                            <label class="control-label pull-right">Transaction Currency</label>
+                        </div>
+                        <div class="input-group input-group-sm col-sm-8 ">
+                            <input type="text" class="form-control" name="TransactionCurrency" ng-model="InputData.TransactionCurrency" placeholder="Transaction Currency"  />
+                            <span class="input-group-addon">String</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-md-3">
+                            <label class="control-label pull-right">Transaction Amount</label>
+                        </div>
+                        <div class="input-group input-group-sm col-sm-8 ">
+                            <input type="text" class="form-control" name="TransactionAmount" ng-model="InputData.TransactionAmount" placeholder="Transaction Amount"  />
+                            <span class="input-group-addon">String</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-md-3">
+                            <label class="control-label pull-right">PPLK Account ID</label>
+                        </div>
+                        <div class="input-group input-group-sm col-sm-8 ">
+                            <input type="text" class="form-control" name="PPLKAccountID" ng-model="InputData.PPLKAccountID" placeholder="PPLK Account ID"  />
+                            <span class="input-group-addon">String</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-md-3">
+                            <label class="control-label pull-right">Tags</label>
+                        </div>
+                        <div class="input-group input-group-sm col-sm-8 ">
+                            <input type="text" class="form-control" name="Tags" ng-model="InputData.Tags" placeholder="Tags"  />
+                            <span class="input-group-addon">String</span>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-md-3"></div>
+                        <div class="col-sm-2 ">
+                            <button class="btn btn-info btn-block pull-left" ng-click='TransactionTimeOutCalls(InputData)' type="submit">
+                                Submit
+                            </button>
+                        </div>
+                        <div class="col-sm-4 "></div>
+                    </div>
+                </fieldset>
+            </form>
+            <h3></h3>
+            <div class="form-group clearfix">
+                <div class="col-md-3"></div>
+                <div class="col-sm-4 ">
+                    <button class="btn btn-block" ng-click='reSetData()' type="submit">
+                        Clear
+                    </button>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group clearfix">
+                        <div class="detail-view ">
+                            <label class="control-label pull-right">Request</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3></h3>
+            <div class="form-group ">
+                <div class="col-md-3">
+                    <div class="form-group clearfix">
+                        <div class="detail-view ">
+                            <label class="control-label pull-right">Response</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 ">
+                    <pre class="prettyprint " datatype="json">
+                        {{responseData}}
+                    </pre>
+                </div>
+                <div class="col-sm-4 ">
+                    <pre class="prettyprint " datatype="json">
+                        {{requestData}}
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

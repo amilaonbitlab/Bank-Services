@@ -1,4 +1,4 @@
-app.controller("transactionTimeOutCallsController",function($scope,$http) {
+app.controller("merchantIDVerificationController",function($scope,$http) {
     
     $scope.message = "All reserved @sampath.com";
 
@@ -8,12 +8,13 @@ app.controller("transactionTimeOutCallsController",function($scope,$http) {
         $scope.reqUrl = 'http://localhost:1337/payment/transactionByBank';
         $scope.InputData.SecurityToken = '';
         $scope.InputData.SessionID = '';
+        $scope.InputData.MessageRouteID = '';
         $scope.InputData.TimeStamp = '';
-        $scope.InputData.SecretTransactionKey = '';
         $scope.InputData.TransactionID = '';
-        $scope.InputData.SessionRequestType = '';
-        $scope.InputData.StatusCode = '';
-        $scope.InputData.StatusDescription = '';
+        $scope.InputData.PaymentMerchantID = '';
+        $scope.InputData.TransactionCurrency = '';
+        $scope.InputData.TransactionAmount = '';
+        $scope.InputData.PPLKAccountID = '';
         $scope.InputData.Tags = '';
 
     }
@@ -29,12 +30,13 @@ app.controller("transactionTimeOutCallsController",function($scope,$http) {
         var reqData = {
             SecurityToken: inputData.SecurityToken,
             SessionID: inputData.SessionID,
+            MessageRouteID: inputData.MessageRouteID,
             TimeStamp: inputData.TimeStamp,
-            SecretTransactionKey: inputData.SecretTransactionKey,
             TransactionID: inputData.TransactionID,
-            SessionRequestType: inputData.SessionRequestType,
-            StatusCode: inputData.StatusCode,
-            statusDescription: inputData.StatusDescription,
+            PaymentMerchantID: inputData.PaymentMerchantID,
+            TransactionCurrency: inputData.TransactionCurrency,
+            TransactionAmount: inputData.TransactionAmount,
+            PPLKAccountID: inputData.PPLKAccountID,
             Tags: inputData.Tags
         };
 

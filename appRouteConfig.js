@@ -24,5 +24,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
           url: "/transactionTimeOutCalls",
           templateUrl: "app/TransactionTimeOutCalls/transactionTimeOutCallsView.html",
           controller: "transactionTimeOutCallsController"
+      })
+      .state('merchantIDVerification', {
+          url: "/merchantIDVerification",
+          templateUrl: "app/MerchantIDVerification/merchantIDVerificationView.html",
+          controller: "merchantIDVerificationController"
       });
 });
