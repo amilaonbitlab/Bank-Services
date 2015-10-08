@@ -1,4 +1,4 @@
-app.controller("createPaymentController",function($scope,$http) {
+app.controller("transactionController",function($scope,$http) {
     
     $scope.message = "All reserved @sampath.com";
 
@@ -30,7 +30,7 @@ app.controller("createPaymentController",function($scope,$http) {
 
     $scope.requestData = '';
 
-    $scope.CreatePayment = function(inputData){
+    $scope.Transaction = function(inputData){
 
         var reqData = {
             SecurityToken: inputData.SecurityToken,

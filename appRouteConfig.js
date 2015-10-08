@@ -6,27 +6,27 @@ app.config(function($stateProvider, $urlRouterProvider) {
   // Now set up the states
     $urlRouterProvider.otherwise(function($injector) {
         var $state = $injector.get("$state");
-        $state.go('account');
+        $state.go('accountAuthorization');
     });
 
   $stateProvider
-    .state('account', {
+    .state('accountAuthorization', {
       url: "/createAccountRequest",
-        templateUrl: "app/CreateAccount/createAccountView.html",
-        controller: "createAccountController"
+        templateUrl: "app/AccountAuthorization/accountAuthorizationView.html",
+        controller: "accountAuthorizationController"
     })
-    .state('payment', {
-        url: "/createPaymentRequest",
-        templateUrl: "app/CreatePayment/createPaymentView.html",
-        controller: "createPaymentController"
+    .state('transaction', {
+        url: "/transactionRequest",
+        templateUrl: "app/Transaction/transactionView.html",
+        controller: "transactionController"
       })
       .state('transactionTimeOutCalls', {
-          url: "/transactionTimeOutCalls",
+          url: "/transactionTimeOutCallsRequest",
           templateUrl: "app/TransactionTimeOutCalls/transactionTimeOutCallsView.html",
           controller: "transactionTimeOutCallsController"
       })
       .state('merchantIDVerification', {
-          url: "/merchantIDVerification",
+          url: "/merchantIDVerificationRequest",
           templateUrl: "app/MerchantIDVerification/merchantIDVerificationView.html",
           controller: "merchantIDVerificationController"
       });

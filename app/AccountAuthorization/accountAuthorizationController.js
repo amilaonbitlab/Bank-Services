@@ -1,4 +1,4 @@
-app.controller("createAccountController",function($scope,$http) {
+app.controller("accountAuthorizationController",function($scope,$http) {
 
     $scope.message = "All reserved @sampath.com";
 
@@ -21,7 +21,7 @@ app.controller("createAccountController",function($scope,$http) {
 
     $scope.reqUrl = 'http://localhost:1337/account/preRegisterVerification';
 
-    $scope.CreateAccount = function(inputData){
+    $scope.CreateAccountAuthorization = function(inputData){
 
         var reqData = {
             SecurityToken : inputData.SecurityToken,
