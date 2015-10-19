@@ -11,6 +11,7 @@ app.controller("transactionController",function($scope,$http) {
         $scope.InputData.MessageRouteID = '';
         $scope.InputData.TimeStamp = '';
         $scope.InputData.TransactionID = '';
+        $scope.InputData.TransactionIDOriginator = '';
         $scope.InputData.SecretTransactionKey = '';
         $scope.InputData.PaymentMerchantID = '';
         $scope.InputData.PaymentMerchantName = '';
@@ -38,6 +39,7 @@ app.controller("transactionController",function($scope,$http) {
             MessageRouteID: inputData.MessageRouteID,
             TimeStamp: inputData.TimeStamp,
             TransactionID: inputData.TransactionID,
+            TransactionIDOriginator: inputData.TransactionIDOriginator,
             SecretTransactionKey: inputData.SecretTransactionKey,
             PaymentMerchantID: inputData.PaymentMerchantID,
             PaymentMerchantName: inputData.PaymentMerchantName,
@@ -52,7 +54,7 @@ app.controller("transactionController",function($scope,$http) {
 
         $scope.requestData = reqData;
 
-        var createReq = $http.post('http://localhost:1337/payment/transactionByBank',reqData);
+        var createReq = $http.post($scope.reqUrl,reqData);
 
         createReq.success(function(data, status, header, config) {
             $scope.responseData = data;

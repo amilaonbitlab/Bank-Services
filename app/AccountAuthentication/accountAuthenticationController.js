@@ -1,45 +1,41 @@
-app.controller("merchantIDVerificationController",function($scope,$http) {
-    
+app.controller("accountAuthenticationController",function($scope,$http) {
+
     $scope.message = "All reserved @sampath.com";
 
     $scope.reSetData = function(){
         $scope.responseData = '';
         $scope.requestData = '';
-        $scope.reqUrl = 'http://localhost:1337/account/preRegisterVerification';
+        $scope.InputData.VerificationCode = '';
         $scope.InputData.SecurityToken = '';
         $scope.InputData.SessionID = '';
-        $scope.InputData.MessageRouteID = '';
         $scope.InputData.TimeStamp = '';
         $scope.InputData.TransactionID = '';
-        $scope.InputData.PaymentMerchantID = '';
-        $scope.InputData.TransactionCurrency = '';
-        $scope.InputData.TransactionAmount = '';
-        $scope.InputData.PPLKAccountID = '';
+        $scope.InputData.SecretTransactionKey = '';
+        $scope.InputData.SessionRequestType = '';
+        $scope.InputData.StatusCode = '';
         $scope.InputData.Tags = '';
-
+        $scope.reqUrl = 'http://localhost:1337/account/accountAuthentication';
     }
 
     $scope.responseData = '';
 
-    $scope.reqUrl = 'http://localhost:1337/account/preRegisterVerification';
-
     $scope.requestData = '';
 
-    $scope.TransactionTimeOutCalls = function(inputData){
+    $scope.reqUrl = 'http://localhost:1337/account/accountAuthentication';
+
+    $scope.CreateAccountAuthentication = function(inputData){
 
         var reqData = {
-            SecurityToken: inputData.SecurityToken,
+            SecurityToken : inputData.SecurityToken,
             SessionID: inputData.SessionID,
-            MessageRouteID: inputData.MessageRouteID,
             TimeStamp: inputData.TimeStamp,
             TransactionID: inputData.TransactionID,
-            PaymentMerchantID: inputData.PaymentMerchantID,
-            TransactionCurrency: inputData.TransactionCurrency,
-            TransactionAmount: inputData.TransactionAmount,
-            PPLKAccountID: inputData.PPLKAccountID,
+            SecretTransactionKey: inputData.SecretTransactionKey,
+            SessionRequestType: inputData.SessionRequestType,
+            StatusCode: inputData.StatusCode,
+            VerificationCode: inputData.VerificationCode,
             Tags: inputData.Tags
         };
-
         $scope.requestData = reqData;
 
         var createReq = $http.post($scope.reqUrl,reqData);

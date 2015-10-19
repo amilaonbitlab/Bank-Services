@@ -5,7 +5,7 @@ app.controller("transactionTimeOutCallsController",function($scope,$http) {
     $scope.reSetData = function(){
         $scope.responseData = '';
         $scope.requestData = '';
-        $scope.reqUrl = 'http://localhost:1337/payment/transactionByBank';
+        $scope.reqUrl = 'http://localhost:1337/account/preRegisterVerification';
         $scope.InputData.SecurityToken = '';
         $scope.InputData.SessionID = '';
         $scope.InputData.TimeStamp = '';
@@ -20,7 +20,7 @@ app.controller("transactionTimeOutCallsController",function($scope,$http) {
 
     $scope.responseData = '';
 
-    $scope.reqUrl = 'http://localhost:1337/payment/transactionByBank';
+    $scope.reqUrl = 'http://localhost:1337/account/preRegisterVerification';
 
     $scope.requestData = '';
 
@@ -34,13 +34,13 @@ app.controller("transactionTimeOutCallsController",function($scope,$http) {
             TransactionID: inputData.TransactionID,
             SessionRequestType: inputData.SessionRequestType,
             StatusCode: inputData.StatusCode,
-            statusDescription: inputData.StatusDescription,
+            StatusDescription: inputData.StatusDescription,
             Tags: inputData.Tags
         };
 
         $scope.requestData = reqData;
 
-        var createReq = $http.post('http://localhost:1337/payment/transactionByBank',reqData);
+        var createReq = $http.post($scope.reqUrl,reqData);
 
         createReq.success(function(data, status, header, config) {
             $scope.responseData = data;

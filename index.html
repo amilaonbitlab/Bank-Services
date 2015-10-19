@@ -1,7 +1,7 @@
 <!Doctype html>
 <html >
 <head>
-<title>Request Server</title>
+<title>Bank Services</title>
 <!-- Bower Css -->
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
@@ -11,7 +11,8 @@
 	<div class="container-fluid">
 		<div>
 			<ul class="nav navbar-nav">
-				<li class="active"><a ui-sref="accountAuthorization">Account Authorization</a></li>
+				<li class="active"><a ui-sref="accountAuthentication">Account Authentication</a></li>
+				<li class=""><a ui-sref="accountAuthorization">Account Authorization</a></li>
 				<li class=""><a ui-sref="transaction">Transaction</a></li>
 				<li class=""><a ui-sref="transactionTimeOutCalls">Transaction Time Out Calls</a></li>
 				<li class=""><a ui-sref="merchantIDVerification">Merchant ID Verification</a></li>
@@ -32,6 +33,7 @@
 <!-- Custom Js -->
 <script src="app.js"></script>
 <script src="appRouteConfig.js"></script>
+<script src="app/AccountAuthentication/accountAuthenticationController.js"></script>
 <script src="app/AccountAuthorization/accountAuthorizationController.js"></script>
 <script src="app/Transaction/transactionController.js"></script>
 <script src="app/TransactionTimeOutCalls/transactionTimeOutCallsController.js"></script>

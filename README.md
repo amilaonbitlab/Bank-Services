@@ -10,8 +10,20 @@ Server run
 
     Localhost:8888
 
+or
+
+    npm install http-server
+
+    http-server
+
+server run
+
+    localhost:8080
+
 Main function 
 
+    00  Account Authentication
+    
     01  Account Authorization
     
     02  Transaction

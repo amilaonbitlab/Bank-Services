@@ -27,14 +27,14 @@ app.controller("accountAuthorizationController",function($scope,$http) {
             SecurityToken : inputData.SecurityToken,
             SessionID: inputData.SessionID,
             TimeStamp: inputData.TimeStamp,
-            TransactionId: inputData.TransactionID,
+            TransactionID: inputData.TransactionID,
             SecretTransactionKey: inputData.SecretTransactionKey,
             VerificationCode: inputData.VerificationCode,
             Tags: inputData.Tags
         };
         $scope.requestData = reqData;
 
-        var createReq = $http.post('http://localhost:1337/account/preRegisterVerification',reqData);
+        var createReq = $http.post($scope.reqUrl,reqData);
 
         createReq.success(function(data, status, header, config) {
             $scope.responseData = data;

@@ -6,16 +6,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
   // Now set up the states
     $urlRouterProvider.otherwise(function($injector) {
         var $state = $injector.get("$state");
-        $state.go('accountAuthorization');
+        $state.go('accountAuthentication');
     });
 
   $stateProvider
-    .state('accountAuthorization', {
-      url: "/createAccountRequest",
+      .state('accountAuthentication', {
+          url: "/accountAuthenticationRequest",
+          templateUrl: "app/AccountAuthentication/accountAuthenticationView.html",
+          controller: "accountAuthenticationController"
+      })
+      .state('accountAuthorization', {
+      url: "/accountAuthorizationRequest",
         templateUrl: "app/AccountAuthorization/accountAuthorizationView.html",
         controller: "accountAuthorizationController"
-    })
-    .state('transaction', {
+      })
+      .state('transaction', {
         url: "/transactionRequest",
         templateUrl: "app/Transaction/transactionView.html",
         controller: "transactionController"
